@@ -14,7 +14,7 @@ GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY")
 # --- Configure Gemini model ---
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
-    model_gemini = genai.GenerativeModel("gemini-2.0-flash")
+    model_gemini = genai.GenerativeModel("gemini-1.5-flash-latest")
     chat = model_gemini.start_chat(history=[
         {
             "role": "user",
